@@ -1,0 +1,280 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-family: 'Montserrat', 'sans-serif';
+  line-height: 1.5;
+  background-color: #eec4c4;
+  color: #fff;
+}
+
+body .container {
+  min-height: 100vh;
+}
+
+body .container .meal--wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+body .container .meal--wrapper .meal--search {
+  margin: 2rem 0;
+}
+
+body .container .meal--wrapper .meal--search h2 {
+  font-size: clamp(1.5rem, 5vw, 3rem);
+  font-weight: 500;
+}
+
+body .container .meal--wrapper .meal--search blockquote {
+  margin-bottom: 1rem;
+}
+
+body .container .meal--wrapper .meal--search blockquote cite {
+  font-size: clamp(0.5rem, 5vw, 1rem);
+  margin-bottom: 1rem;
+}
+
+body .container .meal--wrapper .meal--search__box {
+  width: 60%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body .container .meal--wrapper .meal--search__box input {
+  width: 100%;
+  outline: none;
+  background: none;
+  padding: 1rem .5rem;
+  border: none;
+  border-bottom: 1px solid #f29191;
+  font-size: 1.25rem;
+  color: #fff;
+}
+
+body .container .meal--wrapper .meal--search__box input::-webkit-input-placeholder {
+  opacity: .5;
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
+}
+
+body .container .meal--wrapper .meal--search__box input:-ms-input-placeholder {
+  opacity: .5;
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
+}
+
+body .container .meal--wrapper .meal--search__box input::-ms-input-placeholder {
+  opacity: .5;
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
+}
+
+body .container .meal--wrapper .meal--search__box input::placeholder {
+  opacity: .5;
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
+}
+
+body .container .meal--wrapper .meal--search__box input:focus::-webkit-input-placeholder {
+  opacity: 1;
+}
+
+body .container .meal--wrapper .meal--search__box input:focus:-ms-input-placeholder {
+  opacity: 1;
+}
+
+body .container .meal--wrapper .meal--search__box input:focus::-ms-input-placeholder {
+  opacity: 1;
+}
+
+body .container .meal--wrapper .meal--search__box input:focus::placeholder {
+  opacity: 1;
+}
+
+body .container .meal--wrapper .meal--search__box button {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #f29191;
+}
+
+body .container .meal--wrapper .meal--display {
+  margin-top: 4rem;
+}
+
+body .container .meal--wrapper .meal--display h2 {
+  font-size: clamp(1.5rem, 5vw, 2.75rem);
+  font-weight: 300;
+}
+
+body .container .meal--wrapper .meal--display .meal {
+  margin: 2rem 0;
+  display: -ms-grid;
+  display: grid;
+  gap: 1rem;
+  -ms-grid-columns: (minmax(300px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+body .container .meal--wrapper .meal--display .meal--item {
+  -webkit-box-shadow: 6px 5px 21px -3px #f29191;
+          box-shadow: 6px 5px 21px -3px #f29191;
+  background-color: #fff;
+  border-radius: 1rem;
+  margin: 1rem 0;
+}
+
+body .container .meal--wrapper .meal--display .meal--item .meal-img {
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+body .container .meal--wrapper .meal--display .meal--item .meal-img img {
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+body .container .meal--wrapper .meal--display .meal--item .meal-img img:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+body .container .meal--wrapper .meal--display .meal--item .meal--name {
+  padding: 1.5rem .5rem;
+}
+
+body .container .meal--wrapper .meal--display .meal--item .meal--name h3 {
+  font-size: clamp(1.25rem, 5vw, 2rem);
+  font-weight: 900;
+  -webkit-text-stroke: 2px #f29191;
+  -webkit-text-fill-color: transparent;
+}
+
+body .container .meal--wrapper .meal--display .meal--item .meal--name button {
+  color: #fff;
+  background: #f29191;
+  padding: 1rem 1.5rem;
+  border-radius: 10px;
+  display: inline-block;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+body .container .meal--wrapper .meal--display .meal--item .meal--name button:hover {
+  -webkit-filter: brightness(110%);
+          filter: brightness(110%);
+}
+
+body .container .meal--wrapper .meal--details {
+  position: fixed;
+  top: 50%;
+  overflow-y: scroll;
+  left: 50%;
+  border-radius: .5rem;
+  height: 90%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  color: #fff;
+  background-color: #f29191;
+  padding: 2rem;
+  display: none;
+  z-index: 9999;
+}
+
+body .container .meal--wrapper .meal--details.active {
+  display: block;
+}
+
+body .container .meal--wrapper .meal--details::-webkit-scrollbar {
+  width: 20px;
+}
+
+body .container .meal--wrapper .meal--details::-webkit-scrollbar-thumb {
+  background-color: #eec4c4;
+  border-radius: 20px;
+  border: 6px solid transparent;
+  background-clip: content-box;
+}
+
+body .container .meal--wrapper .meal--details::-webkit-scrollbar-thumb:hover {
+  background-color: #fff;
+}
+
+body .container .meal--wrapper .meal--details .category {
+  background: rgba(238, 196, 196, 0.5);
+  padding: .5rem;
+  width: 25%;
+  margin: 0 auto;
+}
+
+body .container .meal--wrapper .meal--details h2 {
+  font-size: clamp(1.5rem, 5vw, 2.75rem);
+}
+
+body .container .meal--wrapper .meal--details .img-wrapper {
+  width: 400px;
+  margin: auto;
+}
+
+body .container .meal--wrapper .meal--details .instruction {
+  margin: .5rem 0;
+}
+
+body .container .meal--wrapper .meal--details .close-btn {
+  font-size: 1.5rem;
+  color: #fff;
+  position: absolute;
+  top: .5rem;
+  right: 1rem;
+  cursor: pointer;
+}
+
+body .container .meal--wrapper .meal--details .watch-btn {
+  color: #f29191;
+  display: inline-block;
+  background-color: #eec4c4;
+  padding: .75rem 1.25rem;
+  border-radius: 1rem;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+  margin-top: 1rem;
+}
+
+body .container .meal--wrapper .meal--details .watch-btn:hover {
+  -webkit-filter: brightness(110%);
+          filter: brightness(110%);
+}
+
+body .overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+  z-index: 1;
+}
+
+body .overlay.active {
+  display: block;
+}
+/*# sourceMappingURL=style.css.map */
